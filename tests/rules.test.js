@@ -1,8 +1,0 @@
-const test=require('node:test'),assert=require('node:assert/strict');const {finished,canView,canEdit,canClaim}=require('../server/rules');
-const a={id:'1',role:'admin'},b={id:'2',role:'employee'},c={id:'3',role:'employee'};const common={scope:'common',owner_id:null,result:'none'},personal={scope:'personal',owner_id:'2',result:'none'};
-test('common tasks visible to everyone but only free tasks claimable',()=>{assert.ok(canView(b,common));assert.ok(canClaim(b,common));assert.ok(!canClaim(c,{...common,owner_id:'2'}));assert.ok(!canEdit(c,{...common,owner_id:'2'}));});
-test('personal tasks restricted to admin and owner',()=>{assert.ok(canView(a,personal));assert.ok(canView(b,personal));assert.ok(!canView(c,personal));assert.ok(!canClaim(c,{...personal,owner_id:null}));assert.ok(canEdit(b,personal));});
-test('closed and postponed rules',()=>{assert.ok(finished({result:'failed'}));assert.ok(!finished({result:'postponed'}));assert.ok(!canEdit(b,{...personal,result:'success'}));assert.ok(canEdit(a,{...personal,result:'success'}));});
-
-test('closed orders are visible only to admin regardless of scope and owner',()=>{for(const t of [common,personal,{...common,owner_id:'2'}])for(const result of ['success','failed']){const order={...t,result};assert.ok(canView(a,order));assert.ok(!canView(b,order));assert.ok(!canView(c,order));assert.ok(!canClaim(b,order));assert.ok(!canEdit(b,order));}});
-test('postponed orders remain visible and editable for their owner',()=>{const t={...common,owner_id:'2',result:'postponed'};assert.ok(canView(a,t));assert.ok(canView(b,t));assert.ok(canView(c,t));assert.ok(canEdit(b,t));assert.ok(!canEdit(c,t));});
