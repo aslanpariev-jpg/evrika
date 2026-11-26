@@ -1,0 +1,32 @@
+From: Avito <alerts@avito.ru>
+To: Demo <demo@example.com>
+Subject: HTML example
+Message-ID: <html-example@avito.ru>
+Date: Mon, 9 Nov 2026 11:00:00 +0300
+Authentication-Results: mx.google.com; dkim=pass header.i=@avito.ru
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!doctype html><html><body>
+<p>Сохранённый поиск: Квартиры города</p>
+<article>
+<a href="https://avito.ru/gorod/kvartiry/kvartira_987654321?context=demo">
+<img src="https://static.avito.st/items/real-photo.jpg" width="240" height="160">2-комнатная квартира, 54,5 м²</a>
+<div>Цена: 5 750 000 ₽</div>
+<div>Тип сделки: Аренда</div>
+<div>Продавец: Агентство</div>
+<div>Адрес: ул. Тестовая, 1</div>
+<a href="https://m.avito.ru/gorod/kvartiry/kvartira_987654321#check">Подробнее</a>
+</article>
+<article>
+<h2>Гараж</h2>
+<div>Цена: 1 300 000 руб.</div>
+<a href="https://www.avito.ru/gorod/garazhi/garazh_987654322">Подробнее</a>
+<img src="https://static.avito.st/images/pixel.png" width="1" height="1">
+<img src="https://tracker.example.com/unrelated.png">
+</article>
+<script>alert('never-run')</script>
+<a href="https://avito.ru.evil.example/invalid_123456999">Поддельная ссылка</a>
+<a href="https://www.avito.ru/redirect?to=https%3A%2F%2Fevil.example">Внешний переход</a>
+</body></html>

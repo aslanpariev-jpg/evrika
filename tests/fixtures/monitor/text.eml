@@ -1,0 +1,28 @@
+From: Avito <alerts@avito.ru>
+To: Demo <demo@example.com>
+Subject: Saved search
+Message-ID: <text-example@avito.ru>
+Date: Mon, 9 Nov 2026 10:00:00 +0300
+Authentication-Results: mx.google.com; dmarc=pass header.from=avito.ru
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Сохранённый поиск: Дома и участки
+
+Название: Дом, 95 м²
+Тип сделки: Продажа
+Цена: 6 450 000 ₽
+Город: Назрань
+Район: Центр
+Адрес: ул. Тестовая, 10
+Описание: Вода и электричество подключены.
+Количество комнат: 4
+Тип продавца: Собственник
+Имя продавца: Анна
+Дата публикации: 08.11.2026
+https://m.avito.ru/nazran/doma_dom_123456789?utm_source=mail#photo
+
+Название: Земельный участок
+Тип сделки: Покупка
+https://www.avito.ru/nazran/zemelnye_uchastki/uchastok_123456790

@@ -1,0 +1,32 @@
+{
+  "appId": "ru.evrika.crm.employee",
+  "productName": "EVRIKA Employee",
+  "directories": {
+    "output": "dist/employee"
+  },
+  "files": [
+    "desktop/**/*",
+    "public/style.css",
+    "public/assets/icon.png",
+    "package.json",
+    "!node_modules/**/*"
+  ],
+  "extraMetadata": {
+    "evrikaRole": "employee"
+  },
+  "win": {
+    "target": [
+      "nsis"
+    ],
+    "icon": "desktop/icon.ico",
+    "artifactName": "EVRIKA-Employee-Setup-${version}.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "installerIcon": "desktop/icon.ico",
+    "uninstallerIcon": "desktop/icon.ico"
+  }
+}

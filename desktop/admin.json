@@ -1,0 +1,32 @@
+{
+  "appId": "ru.evrika.crm.admin",
+  "productName": "EVRIKA Admin",
+  "directories": {
+    "output": "dist/admin"
+  },
+  "files": [
+    "desktop/**/*",
+    "public/style.css",
+    "public/assets/icon.png",
+    "package.json",
+    "!node_modules/**/*"
+  ],
+  "extraMetadata": {
+    "evrikaRole": "admin"
+  },
+  "win": {
+    "target": [
+      "nsis"
+    ],
+    "icon": "desktop/icon.ico",
+    "artifactName": "EVRIKA-Admin-Setup-${version}.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "installerIcon": "desktop/icon.ico",
+    "uninstallerIcon": "desktop/icon.ico"
+  }
+}
