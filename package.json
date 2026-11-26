@@ -1,5 +1,0 @@
-{
-  "name":"evrika-crm", "version":"1.0.0", "description":"EVRIKA CRM", "main":"desktop/main.js", "author":"EVRIKA", "private":true,
-  "scripts":{"start":"node server/index.js","setup":"node server/setup.js","backup":"node server/backup.js","admin":"electron . --admin","employee":"electron . --employee","build:admin":"electron-builder --win --config desktop/admin.json","build:employee":"electron-builder --win --config desktop/employee.json","test":"node --test tests/*.test.js"},
-  "engines":{"node":">=22"}, "dependencies":{"express":"^5.1.0","pg":"^8.13.0","socket.io":"^4.8.1","bcryptjs":"^3.0.2","jsonwebtoken":"^9.0.2","dotenv":"^16.4.7","helmet":"^8.0.0","exceljs":"^4.4.0","express-rate-limit":"^7.5.0"},"devDependencies":{"electron":"^40.0.0","electron-builder":"^26.0.0"}
-}
