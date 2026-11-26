@@ -1,0 +1,1 @@
+const address=document.querySelector('#address');address.value=new URLSearchParams(location.search).get('server')||'';document.querySelector('#form').addEventListener('submit',async e=>{e.preventDefault();try{await window.setup.connect(address.value.trim());}catch(err){document.querySelector('#error').textContent=err.message;}});
